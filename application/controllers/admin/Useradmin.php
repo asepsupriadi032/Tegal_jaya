@@ -9,17 +9,17 @@ class Useradmin extends Super
     {
         parent::__construct();
         $this->language       = 'english'; /** Indonesian / english **/
-        $this->tema           = "flexigrid"; /** datatables / flexigrid **/
+        $this->tema           = "datatables"; /** datatables / flexigrid **/
         $this->tabel          = "admin";
-        $this->active_id_menu = "user";
+        $this->active_id_menu = "useradmin";
         $this->nama_view      = "User";
         $this->status         = true; 
-        $this->field_tambah   = array(); 
-        $this->field_edit     = array(); 
-        $this->field_tampil   = array(); 
+        $this->field_tambah   = array('email','password','nama','status'); 
+        $this->field_edit     = array('email','password','nama','status'); 
+        $this->field_tampil   = array('email','nama'); 
         $this->folder_upload  = 'assets/uploads/files';
         $this->add            = true;
-        $this->edit           = true;
+        $this->edit           = false;
         $this->delete         = true;
         $this->crud;
     }

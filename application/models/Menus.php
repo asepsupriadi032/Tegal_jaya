@@ -6,10 +6,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Menus extends CI_Model
 {
 
-	public function generateMenu()
+	public function generateMenu($type='Admin')
 	{
 		$data = [];
-		$type = $this->session->userdata('kategori_user');
 		$this->db->order_by('urutan','asc');
 		$query = $this->db->get_where("tjm_menu",array('status'=>1,'parent_menu'=>1,'type'=>$type));
 		foreach ($query->result() as $key) {
@@ -36,6 +35,7 @@ class Menus extends CI_Model
 				'child'=>$tmp
 			);
 		}
+
 		return $data;
 	}
 

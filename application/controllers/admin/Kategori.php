@@ -11,8 +11,8 @@ class Kategori extends Super
         $this->language       = 'english'; /** Indonesian / english **/
         $this->tema           = "flexigrid"; /** datatables / flexigrid **/
         $this->tabel          = "kategori";
-        $this->active_id_menu = "kategori";
-        $this->nama_view      = "Kategori";
+        $this->active_id_menu = "kategori_kacamata";
+        $this->nama_view      = "kategori";
         $this->status         = true; 
         $this->field_tambah   = array(); 
         $this->field_edit     = array(); 
@@ -32,7 +32,7 @@ class Kategori extends Super
             /** Relasi Antar Tabel 
             * @parameter (nama_field_ditabel_ini, tabel_relasi, field_dari_tabel_relasinya)
             **/
-            //$this->crud->set_relation('parent_menu','tjm_menu','nama_menu');
+            // $this->crud->set_relation('parent_menu','tjm_menu','nama_menu');
 
             /** Upload **/
             // $this->crud->set_field_upload('nama_field_upload',$this->folder_upload);  

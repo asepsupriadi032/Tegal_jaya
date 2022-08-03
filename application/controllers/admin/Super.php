@@ -29,10 +29,10 @@ class Super extends CI_Controller
         }
     }
     protected function generateData(){
-        $type = $this->session->userdata('kategori_user');
-        $data['active']     = $this->active_id_menu;
-            $data['title']      = $type.' - '.$this->nama_view;
-            $data['judul_1']    = $type.' - '.$this->nama_view;
+        // var_dump($this->active_id_menu); die();
+            $data['active']     = $this->active_id_menu;
+            $data['title']      = 'Admin - '.$this->nama_view;
+            $data['judul_1']    = 'Admin - '.$this->nama_view;
             $data['judul_2']    = '';
             $data['page']       = 'v_crud';
             $data['menu'] = $this->Menus->generateMenu();
